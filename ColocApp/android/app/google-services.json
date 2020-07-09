@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "910517204153",
+    "firebase_url": "https://colocapp-ea69c.firebaseio.com",
+    "project_id": "colocapp-ea69c",
+    "storage_bucket": "colocapp-ea69c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:910517204153:android:b2d35cc59bc864bd3cd768",
+        "android_client_info": {
+          "package_name": "com.example.ColocApp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "910517204153-u3cf844o7m11mtnif6k90qnunbq006bn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIoqRY-J62MUpN4SMvSG7VROdB9pV9Hkw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "910517204153-u3cf844o7m11mtnif6k90qnunbq006bn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
