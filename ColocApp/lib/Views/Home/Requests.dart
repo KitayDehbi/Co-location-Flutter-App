@@ -17,20 +17,7 @@ class Requests extends StatelessWidget{
             
             backgroundColor: Colors.blueAccent,
             elevation: 0.0,
-            actions: <Widget>[
-              FlatButton.icon(
-                icon: Icon(Icons.add),
-                label: Text('Add request'),
-                onPressed: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (context) =>
-                      AddRequest()
-                    ),
-                  );
-                  }
-              ),
-            ],
+            
           ),
           body: RequestList()
         ),

@@ -21,20 +21,7 @@ class Offers extends StatelessWidget{
             
             backgroundColor: Colors.blueAccent,
             elevation: 0.0,
-            actions: <Widget>[
-              FlatButton.icon(
-                icon: Icon(Icons.add),
-                label: Text('Add Offer'),
-                onPressed: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (context) =>
-                      AddOffer()
-                    ),
-                  );
-                  }
-              ),
-            ],
+           
           ),
           body: OfferList()
         ),

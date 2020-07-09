@@ -1,5 +1,6 @@
 import 'package:ColocApp/Models/Offer.dart';
 import 'package:ColocApp/Service/DatabaseService.dart';
+import 'package:ColocApp/Views/Home/UserOfferList.dart';
 import 'package:flutter/material.dart';
 import 'package:ColocApp/Views/Menu/Menu.dart';
 import 'package:provider/provider.dart';
@@ -33,7 +34,7 @@ class MyOffers extends StatelessWidget{
               ),
             ],
           ),
-          //body: UserOfferList()
+          body: UserOfferList()
         ),
       );
    

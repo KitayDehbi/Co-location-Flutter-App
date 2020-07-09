@@ -1,6 +1,7 @@
 import 'package:ColocApp/Models/Offer.dart';
 import 'package:ColocApp/Models/User.dart';
 import 'package:ColocApp/Service/DatabaseService.dart';
+import 'package:ColocApp/Views/Home/MyOffers.dart';
 import 'package:ColocApp/Views/Home/Offers.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -93,11 +94,11 @@ class _AddOfferState extends State<AddOffer> {
                   onPressed: () async {
                     if (_formKey.currentState.validate()) {
                       setState(() => loading = true);          
-                      final user = Provider.of<User>(context);            
-                      await _databaseService.updateUserOffer(new Offer('',
+                                
+                      await _databaseService.updateUserOffer(new Offer('','',
                         address, area, capacity, price, description, null,null,null));
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Offers()));
+                          MaterialPageRoute(builder: (context) => MyOffers()));
                     }
                   }),
               SizedBox(height: 12.0),

@@ -15,7 +15,7 @@ class _RequestListState extends State<RequestList> {
     final requests = Provider.of<List<Request>>(context);
 
     return ListView.builder(
-      itemCount: requests.length,
+      itemCount: requests.length ?? 0,
       itemBuilder: (context, index) {
         return RequestTile(request: requests[index]);
       },

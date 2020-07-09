@@ -13,5 +13,5 @@ class Offer {
   String user_phone;
   String user_email;
 
-  Offer (String uid,this.address,this.surface,this.capacity,this.price,this.description ,this.user_name,this.user_phone,this.user_email );
+  Offer (this.id,this.uid,this.address,this.surface,this.capacity,this.price,this.description ,this.user_name,this.user_phone,this.user_email );
 }

@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:ColocApp/Views/Menu/Menu.dart';
 import 'package:provider/provider.dart';
 import 'AddRequest.dart';
-import 'RequestList.dart';
+import 'UserRequestList.dart';
+
 class MyRequests extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
@@ -32,7 +33,7 @@ class MyRequests extends StatelessWidget{
               ),
             ],
           ),
-          //body: RequestList()
+          body: UserRequestList()
         ),
       );
    

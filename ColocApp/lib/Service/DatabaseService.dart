@@ -59,8 +59,11 @@ class DatabaseService {
   }
   List<Request> _requestListFromSnapshot(QuerySnapshot snapshot) 
   {
+     
     return snapshot.documents.map((doc){
       return Request(
+         doc.documentID,
+          doc.data['user_id'],
          doc.data['maxBudget'] ,
          doc.data['comment'],
          doc.data["user_name"],
@@ -79,6 +82,7 @@ class DatabaseService {
   List<Offer> _offersListFromSnapshot(QuerySnapshot snapshot) {
     return snapshot.documents.map((doc){
       return Offer(
+         doc.documentID,
          doc.data['user_id'],
          doc.data['address'],
          doc.data['surface'],

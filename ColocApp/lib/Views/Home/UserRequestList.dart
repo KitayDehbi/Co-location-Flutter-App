@@ -1,15 +1,15 @@
-import 'package:ColocApp/Models/Offer.dart';
+import 'package:ColocApp/Models/Request.dart';
 import 'package:ColocApp/Models/User.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'UserOfferTile.dart';
+import 'UserRequestTile.dart';
 
-class UserOfferList extends StatefulWidget {
+class UserRequestList extends StatefulWidget {
   @override
-  _UserOfferListState createState() => _UserOfferListState();
+  _UserRequestListState createState() => _UserRequestListState();
 }
 
-class _UserOfferListState extends State<UserOfferList> {
+class _UserRequestListState extends State<UserRequestList> {
   /*@override
   initState() {
     super.initState();
@@ -28,21 +28,21 @@ class _UserOfferListState extends State<UserOfferList> {
   Widget build(BuildContext context) {
     
 
-    final offers = Provider.of<List<Offer>>(context);
+    final requests = Provider.of<List<Request>>(context);
     
-    List<Offer> userOffer= new List<Offer>();
+    List<Request> userRequest= new List<Request>();
     final u = Provider.of<User>(context);
     
-    for (var offer in offers) {
+    for (var request in requests) {
       
-     if(offer.uid==u.uid) 
-     userOffer.add(offer);
+     if(request.uid==u.uid) 
+     userRequest.add(request);
     }
     return ListView.builder(
-      itemCount: userOffer.length,
+      itemCount: userRequest.length,
       itemBuilder: (context, index) {
         
-        return UserOfferTile(offer: userOffer[index]);
+        return UserRequestTile(request: userRequest[index]);
       },
     );
   }

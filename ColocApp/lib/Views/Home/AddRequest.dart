@@ -1,6 +1,7 @@
 import 'package:ColocApp/Models/Request.dart';
 import 'package:ColocApp/Models/User.dart';
 import 'package:ColocApp/Service/DatabaseService.dart';
+import 'package:ColocApp/Views/Home/MyRequests.dart';
 import 'package:ColocApp/Views/Home/Requests.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -65,9 +66,9 @@ class _AddRequestState extends State<AddRequest>  {
                 onPressed: () async {
                   if(_formKey.currentState.validate()){
                     setState(() => loading = true);
-                    User user = Provider.of<User>(context);
-                    await _databaseService.updateUserRequest( new Request(buget, comment ,null,null,null));
-                      Navigator.push(context,MaterialPageRoute(builder: (context) => Requests()));
+                    
+                    await _databaseService.updateUserRequest( new Request('','',buget, comment ,null,null,null));
+                      Navigator.push(context,MaterialPageRoute(builder: (context) => MyRequests()));
                   }
                 }
               ),
