@@ -18,7 +18,7 @@ class RequestTile extends StatelessWidget {
             radius: 25.0,
            
           ),
-          title: Text(request.maxBudget.toString()),
+          title: Text(request.maxBudget.toString()+ ' DH'),
           subtitle: Text(request.comment),
           onTap: () {
             showDialog(

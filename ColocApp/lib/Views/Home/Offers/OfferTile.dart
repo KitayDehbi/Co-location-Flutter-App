@@ -15,7 +15,7 @@ class OfferTile extends StatelessWidget {
           leading: CircleAvatar(
             radius: 25.0,
           ),
-          title: Text(offer.price.toString()),
+          title: Text(offer.price.toString()+' DH'),
           subtitle: Text(offer.description),
           onTap: () {
             showDialog(

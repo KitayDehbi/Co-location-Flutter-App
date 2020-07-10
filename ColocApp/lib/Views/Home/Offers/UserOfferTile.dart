@@ -49,7 +49,7 @@ final db = Firestore.instance;
           leading: CircleAvatar(
             radius: 25.0,
           ),
-          title: Text(offer.price.toString()),
+          title: Text(offer.price.toString()+ 'DH'),
           subtitle: Text(offer.description),
           onLongPress: () {
             _showDialog();
