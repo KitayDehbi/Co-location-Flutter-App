@@ -1,13 +1,11 @@
-import 'package:ColocApp/Service/Auth.dart';
-import 'package:ColocApp/Views/Home/Offers.dart';
+import 'package:ColocApp/Views/Home/Map/MapOffer.dart';
+import 'package:ColocApp/Views/Home/Offers/Offers.dart';
 import 'package:ColocApp/Views/Home/home.dart';
-
 import 'package:flutter/material.dart';
-import 'package:ColocApp/Views/Home/MyOffers.dart';
-import 'package:ColocApp/Views/Home/Requests.dart';
-import 'package:ColocApp/Views/Home/MyRequests.dart';
+import 'package:ColocApp/Views/Home/Offers/MyOffers.dart';
+import 'package:ColocApp/Views/Home/Requests/Requests.dart';
+import 'package:ColocApp/Views/Home/Requests/MyRequests.dart';
 class Menu extends StatelessWidget{
-  final AuthService _auth = AuthService();
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -81,12 +79,12 @@ class Menu extends StatelessWidget{
               dense:true,
               onTap: () {
                 
-                /*Navigator.of(context).push(
+                Navigator.of(context).push(
                   MaterialPageRoute(
                     builder: (context) =>
-                        NewsPage()
+                        MapOffer()
                   ),
-                );*/
+                );
               },
             ),
             ListTile(

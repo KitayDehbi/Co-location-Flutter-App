@@ -1,8 +1,5 @@
 import 'package:ColocApp/Models/User.dart';
 import 'package:ColocApp/Views/Authentication/Authenticate.dart';
-import 'package:ColocApp/Views/Home/MyRequests.dart';
-import 'package:ColocApp/Views/Home/OfferList.dart';
-import 'package:ColocApp/Views/Home/Offers.dart';
 import 'package:ColocApp/Views/Home/home.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';

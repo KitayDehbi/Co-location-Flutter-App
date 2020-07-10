@@ -54,7 +54,10 @@ class DatabaseService {
       'description' : offer.description,
       'user_phone' : u.phone,
       'user_email' : u.email,
-      'user_name' : u.name
+      'user_name' : u.name,
+      'lat' : offer.lat,
+      'lng' :offer.lng
+
     });
   }
   List<Request> _requestListFromSnapshot(QuerySnapshot snapshot) 
@@ -91,7 +94,9 @@ class DatabaseService {
          doc.data['description'],
          doc.data["user_name"],
          doc.data["user_phone"],
-         doc.data["user_email"] 
+         doc.data["user_email"], 
+         doc.data['lat'],
+         doc.data['lng'],
       );
     }).toList();
   }

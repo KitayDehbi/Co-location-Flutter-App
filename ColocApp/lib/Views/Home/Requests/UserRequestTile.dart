@@ -18,7 +18,7 @@ class UserRequestTile extends StatelessWidget {
         // return object of type Dialog
         return AlertDialog(
           title: new Text("Delete"),
-          content: new Text("Do you want to delete this Offer ? "),
+          content: new Text("Do you want to delete this Request ? "),
           actions: <Widget>[
             // usually buttons at the bottom of the dialog
             new FlatButton(

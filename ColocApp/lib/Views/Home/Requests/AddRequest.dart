@@ -1,8 +1,8 @@
 import 'package:ColocApp/Models/Request.dart';
 import 'package:ColocApp/Models/User.dart';
 import 'package:ColocApp/Service/DatabaseService.dart';
-import 'package:ColocApp/Views/Home/MyRequests.dart';
-import 'package:ColocApp/Views/Home/Requests.dart';
+import 'package:ColocApp/Views/Home/Requests/MyRequests.dart';
+import 'package:ColocApp/Views/Home/Requests/Requests.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

@@ -1,11 +1,8 @@
 import 'package:ColocApp/Models/Offer.dart';
-import 'package:ColocApp/Models/User.dart';
 import 'package:ColocApp/Service/DatabaseService.dart';
-import 'package:ColocApp/Views/Home/MyOffers.dart';
-import 'package:ColocApp/Views/Home/Offers.dart';
+import 'package:ColocApp/Views/Home/Offers/MyOffers.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-
+import 'package:geocoder/geocoder.dart';
 class AddOffer extends StatefulWidget {
   @override
   _AddOfferState createState() => _AddOfferState();
@@ -46,7 +43,10 @@ class _AddOfferState extends State<AddOffer> {
                 ),
                 validator: (val) => val.isEmpty ? 'Enter an Adress' : null,
                 onChanged: (val) {
-                  setState(() => address = val);
+                  setState(() => address = val
+
+                      
+                  );
                 },
               ),
               TextFormField(
@@ -94,9 +94,10 @@ class _AddOfferState extends State<AddOffer> {
                   onPressed: () async {
                     if (_formKey.currentState.validate()) {
                       setState(() => loading = true);          
-                                
+                      var addresses = await Geocoder.local.findAddressesFromQuery(address);
+                      var first = addresses.first;  
                       await _databaseService.updateUserOffer(new Offer('','',
-                        address, area, capacity, price, description, null,null,null));
+                        address, area, capacity, price, description, null,null,null ,first.coordinates.latitude,first.coordinates.longitude));
                       Navigator.push(context,
                           MaterialPageRoute(builder: (context) => MyOffers()));
                     }

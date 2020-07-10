@@ -57,11 +57,6 @@ class OfferTile extends StatelessWidget {
                     ),
                     
                   ])
-                   
-                    
-                    
-                
-                  
               );
           },
         ),

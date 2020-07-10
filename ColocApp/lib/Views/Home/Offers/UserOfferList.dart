@@ -10,20 +10,6 @@ class UserOfferList extends StatefulWidget {
 }
 
 class _UserOfferListState extends State<UserOfferList> {
-  /*@override
-  initState() {
-    super.initState();
-    getUser();
-  }
-  final FirebaseAuth _auth = FirebaseAuth.instance;
-  String uid='';
-  getUser() async
-  {
-    FirebaseUser u=await  _auth.currentUser();
-    setState(() {
-      this.uid = u.uid;
-    });
-  }*/
   @override
   Widget build(BuildContext context) {
     

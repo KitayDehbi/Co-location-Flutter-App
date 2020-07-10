@@ -1,4 +1,4 @@
-import 'package:ColocApp/Models/User.dart';
+import 'package:latlong/latlong.dart';
 
 class Offer {
   String id;
@@ -12,6 +12,9 @@ class Offer {
   String user_name;
   String user_phone;
   String user_email;
+  double lat;
+  double lng;
 
-  Offer (this.id,this.uid,this.address,this.surface,this.capacity,this.price,this.description ,this.user_name,this.user_phone,this.user_email );
+  Offer (this.id,this.uid,this.address,this.surface,this.capacity,
+  this.price,this.description ,this.user_name,this.user_phone,this.user_email, this.lat,this.lng);
 }
